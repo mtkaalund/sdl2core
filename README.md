@@ -1,6 +1,14 @@
 # SDL2 Core
 C++ handles for SDL2, with exceptions.
 
+## Getting the code
+Go to the directory that you will be using for the source code, something like:
+```
+user@computer:~$ mkdir -pv MySuperGame/src
+user@computer:~$ cd MySuperGame/src
+user@computer:~/MySuperGame/src$ git submodule add https://github.com/mtkaalund/sdl2core.git
+```
+There is a example code for initializing the SDL2, SDL_image and SDL_ttf. As there is an example Makefile. Just put them in your source code directory and run `make all`.
 ## Example of usage
 
 ```C++
@@ -51,14 +59,14 @@ OBJS            := $(SRCS:.cc=.o)
 
 .PHONY: all clean remake
 
-clean:
-    @rm -rfv $(OBJS) $(TARGET)
-
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-    $(CC) $(OBJS) -o $(TARGET) $(LDFLAGS)
+        $(CC) $(OBJS) -o $(TARGET) $(LDFLAGS)
 
 %.o: %.cc
-    $(CC) -c $(CXXFLAGS) -o $@ $<
+        $(CC) -c $(CXXFLAGS) -o $@ $<
+
+clean:
+        rm -rfv $(OBJS) $(TARGET)
 ```
