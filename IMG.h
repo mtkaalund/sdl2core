@@ -18,7 +18,7 @@ extern "C" {
 //! After 4th januar 2017, the example could'nt be found.
 class IMG {
 public:
-    //! Constructor. Basicly runs IMG_Init. This will throw an exception with the SDL error message.
+    //! Constructor. Basicly runs IMG_Init. This will throw an exception with the IMG error message.
     //! \sa IMG_Init
     //! \sa IMG_GetError
     //! \param flags
