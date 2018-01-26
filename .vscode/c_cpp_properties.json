@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceRoot}"
+            ],
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 3
+}
