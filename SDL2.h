@@ -20,7 +20,7 @@ class SDL2 {
 public:
     //! Constructor. Basicly runs SDL_Init. This will throw an exception with the SDL error message.
     //! \sa SDL_Init
-    //! \sa SDL_Error
+    //! \sa SDL_GetError
     //! \param flags
     //!< Flags can just be or it can be or'ed together
     //!<    -   SDL_INIT_TIMER          -   Timer subsystem
