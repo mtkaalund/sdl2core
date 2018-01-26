@@ -1,6 +1,6 @@
 #include "IMGException.h"
 
-IMGException::IMGException(): exception(), msg( SDL_GetError() ) {
+IMGException::IMGException(): exception(), msg( IMG_GetError() ) {
 }
 
 IMGException::IMGException( const std::string& _msg ): exception(), msg( _msg ) {
