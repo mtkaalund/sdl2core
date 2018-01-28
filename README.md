@@ -76,6 +76,7 @@ clean:
 ```
 
 So depending on what you are using, you don't need link all SDL2 libraries.
+
 Library | Linker option
 --------|--------------
 SDL2    | `$(shell sdl2-config --libs)`
