@@ -88,3 +88,13 @@ IMG     | -lSDL2_image
 TTF     | -lSDL2_ttf
 MIX     | -lSDL2_mixer
 NET     | -lSDL2_net
+
+## SDL2 urls
+
+Library | Url
+--------|-----
+SDL2 | https://www.libsdl.org/
+SDL2_Image | https://www.libsdl.org/projects/SDL_image/
+SDL2_ttf | https://www.libsdl.org/projects/SDL_ttf/
+SDL2_mixer | https://www.libsdl.org/projects/SDL_mixer/
+SDL2_net | https://www.libsdl.org/projects/SDL_net/
