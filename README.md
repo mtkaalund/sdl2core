@@ -1,5 +1,6 @@
 # SDL2 Core
-C++ handles for SDL2, with exceptions.
+C++ handles for SDL2, with exceptions. When the program exits this automatic quits it library.
+
 
 ## Getting the code
 Go to the directory that you will be using for the source code, something like:
