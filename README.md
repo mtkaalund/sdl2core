@@ -8,7 +8,7 @@ user@computer:~$ mkdir -pv MySuperGame/src
 user@computer:~$ cd MySuperGame/src
 user@computer:~/MySuperGame/src$ git submodule add https://github.com/mtkaalund/sdl2core.git
 ```
-There is a example code for initializing the SDL2, SDL_image, SDL_ttf and SDL2_mixer. As there is an example Makefile. Just put them in your source code directory and run `make all`.
+There is a example code for initializing the SDL2, SDL2_image, SDL2_ttf, SDL2_net and SDL2_mixer. As there is an example Makefile. Just put them in your source code directory and run `make all`.
 ## Example of usage
 
 ```C++
@@ -19,6 +19,7 @@ There is a example code for initializing the SDL2, SDL_image, SDL_ttf and SDL2_m
 #include "sdl2core/IMG.h"
 #include "sdl2core/TTF.h"
 #include "sdl2core/MIX.h"
+#include "sdl2core/NET.h"
 
 int main( int argc, char * argv[] ) {
     try {
@@ -27,6 +28,7 @@ int main( int argc, char * argv[] ) {
         IMG     img( IMG_INIT_PNG );
         MIX     mix( MIX_INIT_MP3 );
         TTF     ttf;
+        NET     net;
         // Do some thing
 
     } catch( SDL2Exception &error ) {
@@ -37,6 +39,8 @@ int main( int argc, char * argv[] ) {
         std::cerr << "MIX error: " << error.what() << std::endl;
     } catch( TTFException &error ) {
         std::cerr << "TTF error: " << error.what() << std::endl;
+    } catch( NETException &error )  {
+        std::cerr << "NET error: " << error.what() << std::endl;
     } catch( const std::exception &error ) {
         std::cerr << "Exception: " << error.what() << std::endl;
     }
@@ -48,7 +52,7 @@ int main( int argc, char * argv[] ) {
 ## Linux compilation
 By using g++
 ```
-g++ main.cc sdl2core/*.cc -g -Wall -std=c++11 $(sdl2-config --cflags --libs ) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -o test 
+g++ main.cc sdl2core/*.cc -g -Wall -std=c++11 $(sdl2-config --cflags --libs ) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net -o test 
 ```
 
 An example Makefile
@@ -56,7 +60,7 @@ An example Makefile
 TARGET          := test
 CC              := g++
 CXXFLAGS        := -g -Wall -std=c++11 $(shell sdl2-config --cflags)
-LDFLAGS         := $(shell sdl2-config --libs) -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+LDFLAGS         := $(shell sdl2-config --libs) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net
 SDL2CORE_SRC    := $(wildcard sdl2core/*.cc)
 SRCS            := $(wildcard *.cc) $(SDL2CORE_SRC)
 OBJS            := $(SRCS:.cc=.o)
@@ -83,3 +87,4 @@ SDL2    | `$(shell sdl2-config --libs)`
 IMG     | -lSDL2_image
 TTF     | -lSDL2_ttf
 MIX     | -lSDL2_mixer
+NET     | -lSDL2_net
