@@ -1,6 +1,10 @@
 # SDL2 Core
 C++ handles for SDL2, with exceptions. When the program exits this automatic quits it library.
 
+## TODO
+- [ ] Need to create `make install`
+- [ ] Need to include win in shared library
+- [ ] Need to update README.md to show how to use shared library
 
 ## Getting the code
 Go to the directory that you will be using for the source code, something like:
@@ -99,3 +103,9 @@ SDL2_Image | https://www.libsdl.org/projects/SDL_image/
 SDL2_ttf | https://www.libsdl.org/projects/SDL_ttf/
 SDL2_mixer | https://www.libsdl.org/projects/SDL_mixer/
 SDL2_net | https://www.libsdl.org/projects/SDL_net/
+
+## Some other urls
+Gernot Klingler has a slight outdated tutorial on how to make a shared library. The only thing that have change is in newer gcc, you'll have to `g++ -o libshared.so -fPIC -shared shared.cpp` instead of `g++ -fPIC -shared shared.cpp -o libshared.so`.
+But do check it out the blog: http://gernotklingler.com/blog/creating-using-shared-libraries-different-compilers-different-operating-systems/
+
+Angel Leon (@gubatron) has created a usefull note on compiling with shared libraries. Do check it out: https://gist.github.com/gubatron/32f82053596c24b6bec6
