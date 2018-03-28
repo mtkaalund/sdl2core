@@ -5,7 +5,7 @@ C++ handles for SDL2, with exceptions. When the program exits this automatic qui
 - [ ] Need to create `make install`
 - [ ] Need to include win in shared library
 - [ ] Need to update README.md to show how to use shared library
-
+~~
 ## Getting the code
 Go to the directory that you will be using for the source code, something like:
 ```
@@ -83,7 +83,7 @@ $(TARGET): $(OBJS)
 clean:
         rm -rfv $(OBJS) $(TARGET)
 ```
-
+~~
 So depending on what you are using, you don't need link all SDL2 libraries.
 
 Library | Linker option
