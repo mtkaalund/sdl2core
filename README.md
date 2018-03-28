@@ -9,11 +9,11 @@ C++ handles for SDL2, with exceptions. When the program exits this automatic qui
 ## Getting the code
 ~~Go to the directory that you will be using for the source code, something like:~~
 ```
-~~user@computer:~$ mkdir -pv MySuperGame/src~~
-~~user@computer:~$ cd MySuperGame/src~~
+user@computer:~$ mkdir -pv MySuperGame/src
+user@computer:~$ cd MySuperGame/src
 user@computer:~/MySuperGame/src$ git submodule add https://github.com/mtkaalund/sdl2core.git
 ```
-There is a example code for initializing the SDL2, SDL2_image, SDL2_ttf, SDL2_net and SDL2_mixer. As there is an example Makefile. Just put them in your source code directory and run `make all`.
+~~There is a example code for initializing the SDL2, SDL2_image, SDL2_ttf, SDL2_net and SDL2_mixer. As there is an example Makefile. Just put them in your source code directory and run `make all`.~~
 ## Example of usage
 
 ```C++
@@ -55,12 +55,12 @@ int main( int argc, char * argv[] ) {
 ```
 
 ## Linux compilation
-By using g++
+~~By using g++~~
 ```
 g++ main.cc sdl2core/*.cc -g -Wall -std=c++11 $(sdl2-config --cflags --libs ) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net -o test 
 ```
 
-An example Makefile
+~~An example Makefile~~
 ```Makefile
 TARGET          := test
 CC              := g++
@@ -83,7 +83,7 @@ $(TARGET): $(OBJS)
 clean:
         rm -rfv $(OBJS) $(TARGET)
 ```
-~~
+
 So depending on what you are using, you don't need link all SDL2 libraries.
 
 Library | Linker option
