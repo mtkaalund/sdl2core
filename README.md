@@ -109,3 +109,5 @@ Gernot Klingler has a slight outdated tutorial on how to make a shared library. 
 But do check it out the blog: http://gernotklingler.com/blog/creating-using-shared-libraries-different-compilers-different-operating-systems/
 
 Angel Leon (@gubatron) has created a usefull note on compiling with shared libraries. Do check it out: https://gist.github.com/gubatron/32f82053596c24b6bec6
+
+George Brocklehurst has made a article about how to use configure, make, make install: https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install
