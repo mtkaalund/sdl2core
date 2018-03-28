@@ -1,7 +1,7 @@
 CP		:= cp -v
 RM		:= rm -rfv
 MKDIR		:= mkdir -pv
-
+MV		:= mv -v
 ifeq ($(ARCH),)
 	ARCH	:= $(shell $(CXX) -dumpmachine)
 endif
