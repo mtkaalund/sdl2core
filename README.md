@@ -5,12 +5,12 @@ C++ handles for SDL2, with exceptions. When the program exits this automatic qui
 - [ ] Need to create `make install`
 - [ ] Need to include win in shared library
 - [ ] Need to update README.md to show how to use shared library
-~~
+
 ## Getting the code
-Go to the directory that you will be using for the source code, something like:
+~~Go to the directory that you will be using for the source code, something like:~~
 ```
-user@computer:~$ mkdir -pv MySuperGame/src
-user@computer:~$ cd MySuperGame/src
+~~user@computer:~$ mkdir -pv MySuperGame/src~~
+~~user@computer:~$ cd MySuperGame/src~~
 user@computer:~/MySuperGame/src$ git submodule add https://github.com/mtkaalund/sdl2core.git
 ```
 There is a example code for initializing the SDL2, SDL2_image, SDL2_ttf, SDL2_net and SDL2_mixer. As there is an example Makefile. Just put them in your source code directory and run `make all`.
