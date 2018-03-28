@@ -8,12 +8,11 @@ endif
 
 INCLUDE_DIR	:= $(shell pwd)/usr/include/sdl2core
 LIBRARY_DIR	:= $(shell pwd)/usr/lib/$(ARCH)
-#LIBRARY_DIR	:= $(shell pwd)/usr/lib/x86_64-linux-gnu
 OBJECTS_DIR	:= objs
 CXXFLAGS	:= $(CFLAGS) -g -Wall -std=c++11 -shared $(shell sdl2-config --cflags) -I./src/
 LDFLAGS		:= $(LDFLAGS) $(shell sdl2-config --libs) -lSDL2_image -lSDL2_ttf -lSDL2_net -lSDL2_net
 SDL2CORE_SRC	:= $(wildcard src/*.cc)
-SDL2CORE_OBJ	:= $(addprefix objs/, $(notdir $(SDL2CORE_SRC:.cc=.o)))
+SDL2CORE_OBJ	:= $(addprefix $(OBJECTS_DIR)/, $(notdir $(SDL2CORE_SRC:.cc=.o)))
 SDL2CORE_LIB	:= $(addprefix $(LIBRARY_DIR)/, $(notdir $(SDL2CORE_SRC:.cc=.so)))
 
 .PHONY: all prepare-install prepare clean dist-clean
@@ -41,8 +40,7 @@ prepare:
 
 clean:
 	$(RM) src/*.d
-	$(RM) $(OBJECTS)/*.o
-	$(RM) $(LIBRARY_DIR)/*.so
+	$(RM) $(OBJECTS_DIR)/*.o
 
 dist-clean: clean
 	$(RM) -r $(LIBRARY_DIR)
