@@ -1,4 +1,4 @@
-#include "SDL2.h"
+#include "libSDL2.h"
 
 SDL2::SDL2( int flags ) throw( SDL2Exception ) {
     if( SDL_Init( flags ) != 0 ) {
