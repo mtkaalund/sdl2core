@@ -12,7 +12,7 @@ class SDL2Exception : public std::exception {
 public:
     SDL2Exception();
     SDL2Exception( const std::string& );
-    virtual ~SDL2Exception();
+    virtual ~SDL2Exception() throw() {}
     virtual const char * what() const throw();
 private:
     std::string msg;
