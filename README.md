@@ -2,7 +2,7 @@
 C++ handles for SDL2, with exceptions. When the program exits this automatic quits it library.
 
 ## TODO
-- [ ] Need to create `make install`
+- [x] Need to create `make install`
 - [ ] Need to include win in shared library
 - [ ] Need to update README.md to show how to use shared library
 
@@ -20,11 +20,11 @@ user@computer:~/MySuperGame/src$ git submodule add https://github.com/mtkaalund/
 #include <iostream>
 #include <exception>
 // SDL2 Subsystem
-#include "sdl2core/SDL2.h"
-#include "sdl2core/IMG.h"
-#include "sdl2core/TTF.h"
-#include "sdl2core/MIX.h"
-#include "sdl2core/NET.h"
+#include <libSDL2.h>
+#include <IMG.h>
+#include <TTF.h>
+#include <MIX.h>
+#include <NET.h>
 
 int main( int argc, char * argv[] ) {
     try {
@@ -57,15 +57,15 @@ int main( int argc, char * argv[] ) {
 ## Linux compilation
 ~~By using g++~~
 ```
-g++ main.cc sdl2core/*.cc -g -Wall -std=c++11 $(sdl2-config --cflags --libs ) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net -o test 
+g++ main.cc sdl2core/*.cc -g -Wall -std=c++11 -I/path/to/sdl2core_headers $(sdl2-config --cflags --libs ) -L/path/to/sdl2core_library -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net -llibsdl2 -llibmix -llibimg -llibnet -llibttf  -o test 
 ```
 
 ~~An example Makefile~~
 ```Makefile
 TARGET          := test
 CC              := g++
-CXXFLAGS        := -g -Wall -std=c++11 $(shell sdl2-config --cflags)
-LDFLAGS         := $(shell sdl2-config --libs) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net
+CXXFLAGS        := -g -Wall -std=c++11 $(shell sdl2-config --cflags) -I/path/to/sdl2core_headers
+LDFLAGS         := $(shell sdl2-config --libs) -lSDL2_image -lSDL2_ttf -lSDL2_mixer -lSDL2_net -L/path/to/sdl2core_library -llibsdl2 -llibimg -llibttf -llibmix -llibnet
 SDL2CORE_SRC    := $(wildcard sdl2core/*.cc)
 SRCS            := $(wildcard *.cc) $(SDL2CORE_SRC)
 OBJS            := $(SRCS:.cc=.o)
