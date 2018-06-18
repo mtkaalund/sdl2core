@@ -3,6 +3,8 @@ ACLOCAL_AMFLAGS = $(ACLOCAL_FLAGS)
 
 lib_LTLIBRARIES = libsdl2.la libttf.la libnet.la libmix.la libimg.la
 
+include_HEADERS = libSDL2.h SDL2Exception.h TTF.h TTFException.h NET.h NETException.h MIX.h MIXException.h IMG.h IMGException.h
+
 libsdl2_la_LDFLAGS = -L/usr/lib/x86_64-linux-gnu -lSDL2 
 libsdl2_la_CFLAGS = -std=c++11 $(AM_CFLAGS)
 libsdl2_la_SOURCES = libSDL2.cc libSDL2.h SDL2Exception.cc SDL2Exception.h
