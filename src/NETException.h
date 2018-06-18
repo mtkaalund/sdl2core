@@ -12,7 +12,7 @@ class NETException : public std::exception {
 public:
     NETException();
     NETException( const std::string& );
-    virtual ~NETException();
+    virtual ~NETException() throw() {}
     virtual const char * what() const throw();
 private:
     std::string msg;

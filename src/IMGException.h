@@ -12,7 +12,7 @@ class IMGException : public std::exception {
 public:
     IMGException();
     IMGException( const std::string& );
-    virtual ~IMGException();
+    virtual ~IMGException() throw() {}
     virtual const char * what() const throw();
 private:
     std::string msg;

@@ -13,7 +13,7 @@ class TTFException : public std::exception {
 public:
     TTFException();
     TTFException( const std::string& );
-    virtual ~TTFException();
+    virtual ~TTFException() throw() {}
     virtual const char * what() const throw();
 private:
     std::string msg;

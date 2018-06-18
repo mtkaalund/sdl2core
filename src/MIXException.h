@@ -12,7 +12,7 @@ class MIXException : public std::exception {
 public:
     MIXException();
     MIXException( const std::string& );
-    virtual ~MIXException();
+    virtual ~MIXException() throw() {}
     virtual const char * what() const throw();
 private:
     std::string msg;
