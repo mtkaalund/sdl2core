@@ -4,6 +4,7 @@ AC_CONFIG_SRCDIR([src])
 
 # Checks for programs.
 AC_PROG_CXX
+AC_CONFIG_MACRO_DIRS([m4])
 
 # Checks for libraries
 LT_INIT
@@ -11,6 +12,7 @@ AC_ENABLE_SHARED
 AC_DISABLE_STATIC
 AC_PROG_LIBTOOL(libsdl2.la)
 AC_PROG_LIBTOOL(libsdl2net.la)
+AC_PROG_LIBTOOL(libsdl2mix.la)
 
 # Checks for typedefs, structures and compiler characteristics
 AC_HEADER_STDBOOL
