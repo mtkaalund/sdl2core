@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
 project(sdl2core)
-
 #set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${sdl2core_SOURCE_DIR}/cmake")
 
 #set(CMAKE_CXX_STANDARD 11)
@@ -12,11 +11,11 @@ project(sdl2core)
 
 #include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS})
 
-add_subdirectory(IMG)
-add_subdirectory(SDL2)
-add_subdirectory(TTF)
-add_subdirectory(NET)
-add_subdirectory(MIX)
+add_subdirectory(sdl2core_img)
+add_subdirectory(sdl2core_sdl2)
+add_subdirectory(sdl2core_ttf)
+add_subdirectory(sdl2core_net)
+add_subdirectory(sdl2core_mix)
 add_subdirectory(Debug)
 #add_library(sdl2core_sdl2exception STATIC src/SDL2Exception.cc)
 #add_library(sdl2core_sdl2exception SHARED src/SDL2Exception.cc)
