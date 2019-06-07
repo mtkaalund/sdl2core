@@ -1,6 +1,6 @@
-#include "NET.h"
+#include "sdl2core/NET.h"
 
-NET::NET( ) throw( NETException ) {
+NET::NET( ) {
     if( SDLNet_Init( ) != 0 ) {
         throw NETException();
     }

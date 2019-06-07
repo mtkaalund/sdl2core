@@ -1,4 +1,4 @@
-#include "IMGException.h"
+#include "sdl2core/IMGException.h"
 
 IMGException::IMGException(): exception(), msg( IMG_GetError() ) {
 }

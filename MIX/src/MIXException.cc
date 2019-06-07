@@ -1,4 +1,4 @@
-#include "MIXException.h"
+#include "sdl2core/MIXException.h"
 
 MIXException::MIXException(): exception(), msg( Mix_GetError() ) {
 }

@@ -1,4 +1,4 @@
-#include "SDL2Exception.h"
+#include "sdl2core/SDL2Exception.h"
 
 SDL2Exception::SDL2Exception(): exception(), msg( SDL_GetError() ) {
 }

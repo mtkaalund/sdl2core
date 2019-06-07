@@ -1,4 +1,4 @@
-#include "NETException.h"
+#include "sdl2core/NETException.h"
 
 NETException::NETException(): exception(), msg( SDLNet_GetError() ) {
 }

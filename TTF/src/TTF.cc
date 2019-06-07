@@ -1,6 +1,6 @@
-#include "TTF.h"
+#include "sdl2core/TTF.h"
 
-TTF::TTF() throw( TTFException ) {
+TTF::TTF() {
     if( ( ! TTF_WasInit() ) && ( TTF_Init() == -1 ) ) {
         throw TTFException();
     }

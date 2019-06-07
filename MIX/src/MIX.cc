@@ -1,6 +1,6 @@
-#include "MIX.h"
+#include "sdl2core/MIX.h"
 
-MIX::MIX( int flag ) throw( MIXException ) {
+MIX::MIX( int flag ) {
     if( ( Mix_Init( flag ) & flag ) != flag ) {
         throw MIXException();
     }

@@ -1,4 +1,4 @@
-#include "TTFException.h"
+#include "sdl2core/TTFException.h"
 
 TTFException::TTFException(): exception(), msg( TTF_GetError() ) {
 }
