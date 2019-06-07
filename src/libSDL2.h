@@ -33,7 +33,7 @@ public:
     //!<    -   SDL_INIT_EVERYTHING     -   all above subsystems
     //!<    -   SDL_INIT_NOPARACHUTE    -   this flag is ignored
     //!<
-    SDL2( int flags = 0 ) throw( SDL2Exception );
+    SDL2( int flags = 0 );// throw( SDL2Exception );
     //! Destructor.  Basicly runs SDL_Quit.
     //! \sa SDL_Quit
     virtual ~SDL2();
