@@ -19,7 +19,7 @@ public:
     //!<    -   MIX_INIT_MP3        -   MP3 audio
     //!<    -   MIX_INIT_OGG        -   Vogorbis audio
     //!<
-    MIX( int flags = 0 ) throw( MIXException );
+    MIX( int flags = 0 );// throw( MIXException );
     //! Destructor.  Basicly runs Mix_Quit.
     //! \sa Mix_Quit
     virtual ~MIX();
