@@ -14,6 +14,8 @@ project(sdl2core)
 
 add_subdirectory(IMG)
 add_subdirectory(SDL2)
+add_subdirectory(TTF)
+add_subdirectory(NET)
 #add_library(sdl2core_sdl2exception STATIC src/SDL2Exception.cc)
 #add_library(sdl2core_sdl2exception SHARED src/SDL2Exception.cc)
 #add_library(sdl2core_sdl2 STATIC src/libSDL2.cc)
