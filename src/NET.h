@@ -12,7 +12,7 @@ public:
     //! Constructor. Basicly runs SDLNet_Init. This will throw an exception with the SDL net error message.
     //! \sa SDLNet_Init
     //! \sa SDLNet_GetError
-    NET() throw( NETException );
+    NET();// throw( NETException );
     //! Destructor.  Basicly runs SDLNet_Quit.
     //! \sa SDLNet_Quit
     virtual ~NET();
