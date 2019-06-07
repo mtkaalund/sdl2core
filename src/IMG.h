@@ -27,7 +27,7 @@ public:
     //!<    -   IMG_INIT_PNG    -   PNG support enabled
     //!<    -   IMG_INIT_TIF    -   TIF support enabled
     //!<
-    IMG( int flags = 0 ) throw( IMGException);
+    IMG( int flags = 0 );// throw( IMGException);
     //! Destructor.  Basicly runs IMG_Quit.
     //! \sa IMG_Quit
     virtual ~IMG();
