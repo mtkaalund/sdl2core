@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(libsdl2core)
+project(sdl2core)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${libsdl2core_SOURCE_DIR}/cmake")
 
