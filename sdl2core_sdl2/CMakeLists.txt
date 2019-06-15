@@ -22,6 +22,7 @@ configure_file(${PROJECT_NAME}.pc.in ${PROJECT_NAME}.pc @ONLY)
 target_include_directories( ${PROJECT_NAME} 
 	PUBLIC
        		${PROJECT_SOURCE_DIR}/include
+		${SDL2_INCLUDE_DIRS}
 	)
 target_include_directories( ${PROJECT_NAME}
 	PRIVATE
