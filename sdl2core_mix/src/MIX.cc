@@ -14,5 +14,6 @@ MIX::MIX( int frequency, Uint16 format, int channels, int chunksize, int flag ) 
 }
 
 MIX::~MIX() {
+    Mix_CloseAudio();
     Mix_Quit();
 }
